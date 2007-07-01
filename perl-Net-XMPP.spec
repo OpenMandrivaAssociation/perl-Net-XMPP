@@ -1,7 +1,6 @@
 %define module	Net-XMPP
 %define name	perl-%{module}
 %define version 1.02
-%define rel	2
 
 Name:		%{name}
 Version:	%{version}
@@ -9,13 +8,12 @@ Release:	%mkrel 1
 Summary:	XMPP Perl Library
 License:	GPL or Artistic
 Group:		Development/Perl
-Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/Net/%{module}-%{version}.tar.bz2
 Url:            http://search.cpan.org/dist/%{module}/
-%if %{mdkversion} < 1010
-BuildRequires:	perl-devel
-%endif
-BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+Source:         http://www.cpan.org/modules/by-module/Net/%{module}-%{version}.tar.bz2
+BuildRequires:	perl(Module::Build)
+BuildRequires:	perl(XML::Stream)
+BuildArch:	    noarch
+BuildRoot:	    %{_tmppath}/%{name}-%{version}
 
 %description
 Net::XMPP is a convenient tool to use for any perl script that would
@@ -29,15 +27,15 @@ official Net::XMPP::xxxxxx packages.
 %setup -q -n %{module}-%{version}
 
 %build
-%{__perl} Makefile.PL INSTALLDIRS=vendor
-%make
+%{__perl} Build.PL installdirs=vendor
+./Build CFLAGS="%{optflags}"
+
+%check
+./Build test
 
 %install
 rm -rf %{buildroot}
-%makeinstall_std
-
-%check
-#make test
+./Build install destdir=%{buildroot}
 
 %clean 
 rm -rf %{buildroot}
@@ -47,4 +45,3 @@ rm -rf %{buildroot}
 %doc CHANGES README
 %{perl_vendorlib}/Net
 %{_mandir}/*/*
-
