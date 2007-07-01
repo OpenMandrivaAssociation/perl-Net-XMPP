@@ -1,11 +1,11 @@
 %define module	Net-XMPP
 %define name	perl-%{module}
-%define version 1.0
+%define version 1.02
 %define rel	2
 
 Name:		%{name}
 Version:	%{version}
-Release:	%mkrel %{rel}
+Release:	%mkrel 1
 Summary:	XMPP Perl Library
 License:	GPL or Artistic
 Group:		Development/Perl
