@@ -13,6 +13,7 @@ Source:         http://www.cpan.org/modules/by-module/Net/%{module}-%{version}.t
 BuildRequires:	perl(Module::Build)
 BuildRequires:	perl(XML::Stream)
 BuildArch:	    noarch
+BuildRoot:	    %{_tmppath}/%{name}-%{version}
 
 %description
 Net::XMPP is a convenient tool to use for any perl script that would
