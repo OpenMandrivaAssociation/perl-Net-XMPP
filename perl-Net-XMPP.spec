@@ -4,7 +4,7 @@
 
 Name:		%{name}
 Version:	%{version}
-Release:	%mkrel 2
+Release:	%mkrel 3
 Summary:	XMPP Perl Library
 License:	GPL or Artistic
 Group:		Development/Perl
