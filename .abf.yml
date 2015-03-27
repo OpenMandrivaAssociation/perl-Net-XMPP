@@ -1,2 +1,4 @@
+removed_sources:
+  Net-XMPP-1.02.tar.bz2: 5be9b345aaaa527150138dbb1bad3c7254f4ce2c
 sources:
-  "Net-XMPP-1.02.tar.bz2": 5be9b345aaaa527150138dbb1bad3c7254f4ce2c
+  Net-XMPP-1.05.tar.gz: 7b2dcc319d76c2d2d055a106d35aff45e973d435

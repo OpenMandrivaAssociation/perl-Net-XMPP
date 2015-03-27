@@ -2,12 +2,12 @@
 
 Summary:	XMPP Perl Library
 Name:		perl-%{module}
-Version:	1.02
-Release:	16
+Version:	%perl_convert_version 1.05
+Release:	1
 License:	GPLv2 or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{module}/
-Source0:	http://www.cpan.org/modules/by-module/Net/%{module}-%{version}.tar.bz2
+Source0:	http://www.cpan.org/modules/by-module/Net/Net-XMPP-1.05.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl(Module::Build)
 BuildRequires:	perl(XML::Stream)
@@ -24,7 +24,7 @@ official Net::XMPP::xxxxxx packages.
 %setup -qn %{module}-%{version}
 
 %build
-%__perl Build.PL installdirs=vendor
+perl Build.PL installdirs=vendor
 ./Build CFLAGS="%{optflags}"
 
 %check
@@ -37,4 +37,3 @@ official Net::XMPP::xxxxxx packages.
 %doc CHANGES README
 %{perl_vendorlib}/Net
 %{_mandir}/man3/*
-
