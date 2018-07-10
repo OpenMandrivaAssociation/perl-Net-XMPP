@@ -3,7 +3,7 @@
 Summary:	XMPP Perl Library
 Name:		perl-%{module}
 Version:	1.02
-Release:	17
+Release:	18
 License:	GPLv2 or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{module}/
