@@ -6,7 +6,7 @@ Version:	1.02
 Release:	19
 License:	GPLv2 or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{module}/
+Url:		https://search.cpan.org/dist/%{module}/
 Source0:	http://www.cpan.org/modules/by-module/Net/%{module}-%{version}.tar.bz2
 BuildArch:	noarch
 BuildRequires:	perl(Module::Build)
